@@ -6,6 +6,7 @@ import {
   Image,
   View,
   Text,
+  Pressable,
 } from "react-native";
 import {Link} from 'expo-router'
 import { TextInput } from "react-native-gesture-handler";
@@ -37,29 +38,28 @@ const login = () => (
       />
   </View>
 
-<View style={{
-  margin: "2%",
-  width: "90%",
+  <View style={styles.botaoDentro}>
+   <Link href="/login/" asChild>
+      <Pressable>
+        <Text style={{color:"white"}}>ENTRAR</Text>
+      </Pressable>
+    </Link>
+    </View>
+   
+    <View style={{
+  marginTop: "5%",
   flex: 1,
   alignSelf: "center",
-  }}>
-  <Button 
-          title="Continuar" 
-          color="#151D2D"
-          />
-   </View>
-   
-   <View style={{
-  margin: "2%",
-  width: "90%",
+  alignItems: "center",
 
-  alignSelf: "center",
   }}>
-   <Button 
-          title="Cadastrar com o google" 
-          color="red"
-          />
+   <Link href="/login/" asChild>
+      <Pressable>
+        <Image source={require("./../../assets/images/Google.png")} />
+      </Pressable>
+    </Link>
     </View>
+
     <Text style={{marginTop:"5%", textAlign:"center", fontSize: 15}}>Já possui uma conta? <Link style={{fontWeight:"bold", color:"#151D2D"}} href="/login/">Faça o login</Link> </Text>
     
   </View>
@@ -94,6 +94,19 @@ const styles = StyleSheet.create({
   divInput: {
   padding: "2%",
   
+  },
+
+  botaoDentro: {
+    marginTop: "5%",
+  width: "92.5%",
+  flex: 1,
+  padding: "1.2%",
+  alignSelf: "center",
+  backgroundColor: "#151D2D",
+  alignContent: "center",
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: 5,
   }
 });
 export default login;
