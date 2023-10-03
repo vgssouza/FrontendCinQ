@@ -19,14 +19,16 @@ const App = () => (
       
       <Image style={styles.logoSize} source={require("./../assets/images/logoBranca.png")} />
     
-
+    <View style={styles.botao}>
       <View style={{
   marginTop: "40%",
   width: "90%",
   flex: 1,
   alignSelf: "center",
   backgroundColor: "#151D2D",
+  alignContent: "center",
   alignItems: "center",
+  justifyContent: "center",
   }}>
    <Link href="/login/" asChild>
       <Pressable>
@@ -36,18 +38,21 @@ const App = () => (
     </View>
 
     <View style={{
-  marginTop: "10%",
+  marginTop: "20%",
   width: "90%",
   flex: 1,
   alignSelf: "center",
   backgroundColor: "#151D2D",
+  alignContent: "center",
   alignItems: "center",
+  justifyContent: "center",
   }}>
-   <Link href="/login/" asChild>
+   <Link href="/registrar/" asChild>
       <Pressable>
       <Text style={{padding: 20, color:"white"}}>REGISTRAR</Text>
       </Pressable>
     </Link>
+    </View>
     </View>
       
     </ImageBackground>
@@ -63,11 +68,10 @@ const styles = StyleSheet.create({
 
   botao: {
     flex: 1,
-    justifyContent: "center",
     alignSelf: "center",
-    alignItems: "center",
-    width: "70%",
+    width: "80%",
   },
+
 
   logoSize: {
     width: 259,
