@@ -29,7 +29,7 @@ const App = () => (
     </View>
 
     <View style={styles.botaoDentro}>
-   <Link href="/registrar/" asChild>
+    <Link href="/registrar/" asChild>
       <Pressable>
       <Text style={{padding: 20, color:"white"}}>REGISTRAR</Text>
       </Pressable>

@@ -39,7 +39,7 @@ const login = () => (
   </View>
 
   <View style={styles.botaoDentro}>
-   <Link href="/login/" asChild>
+   <Link href="/home/" asChild>
       <Pressable>
         <Text style={{color:"white"}}>ENTRAR</Text>
       </Pressable>
@@ -53,7 +53,7 @@ const login = () => (
   alignItems: "center",
 
   }}>
-   <Link href="/login/" asChild>
+   <Link href="/home/" asChild>
       <Pressable>
         <Image source={require("./../../assets/images/Google.png")} />
       </Pressable>
@@ -72,6 +72,7 @@ const styles = StyleSheet.create({
     margin: 12,
     borderWidth: 1,
     padding: 10,
+    borderRadius: 5,
   },
 
   logoSize: {
@@ -93,7 +94,6 @@ const styles = StyleSheet.create({
 
   divInput: {
   padding: "2%",
-  
   },
 
   botaoDentro: {
