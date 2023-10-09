@@ -7,7 +7,7 @@ import {
   View,
   Text,
 } from "react-native";
-import {Link} from 'expo-router'
+import { Link } from "expo-router";
 
 const login = () => (
   <View>
