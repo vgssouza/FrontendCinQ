@@ -76,7 +76,7 @@ export default function Login() {
 
       <Text style={{ marginTop: "5%", textAlign: "center", fontSize: 15 }}>
       Não tem uma conta?{" "}
-      <Link style={{ fontWeight: "bold", color: "#151D2D" }} href="/login/">
+      <Link style={{ fontWeight: "bold", color: "#151D2D" }} href="/registrar/">
         Cadastre-se
       </Link>{" "}
     </Text>
