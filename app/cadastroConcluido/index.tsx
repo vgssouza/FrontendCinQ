@@ -18,49 +18,30 @@ const login = () => (
       source={require("./../../assets/images/logoColorida.png")}
     />
 
-    <Text style={styles.title}>Cadastre-se</Text>
+    <Image
+      style={{ alignSelf: "center", marginTop: "30%" }}
+      source={require("./../../assets/images/sucess.png")}
+    />
 
-    <View style={styles.divInput}>
-      <Text style={{ marginTop: "2%", fontSize: 15, fontWeight: "bold" }}>
-        Nome*
-      </Text>
-      <TextInput style={styles.input} placeholder="Insira seu nome" />
-    </View>
-
-    <View style={styles.divInput}>
-      <Text style={{ fontSize: 15, fontWeight: "bold" }}>Email*</Text>
-      <TextInput style={styles.input} placeholder="Insira seu email" />
-    </View>
-
-    <View style={styles.botaoDentro}>
-      <Link href="/criarSenha/" asChild>
-        <Pressable>
-          <Text style={{ color: "white" }}>Continuar</Text>
-        </Pressable>
-      </Link>
-    </View>
-
-    <View
+    <Text style={styles.title}>Cadastro concluído</Text>
+    <Text
       style={{
-        marginTop: "5%",
-        flex: 1,
+        textAlign: "center",
+        width: "80%",
         alignSelf: "center",
-        alignItems: "center",
       }}
     >
-      <Link href="/home/" asChild>
+      Seu cadastro foi criado com sucesso. Clique no botão abaixo para fazer o
+      login.
+    </Text>
+
+    <View style={styles.botaoDentro}>
+      <Link href="/login/" asChild>
         <Pressable>
-          <Image source={require("./../../assets/images/Google.png")} />
+          <Text style={{ color: "white" }}>Login</Text>
         </Pressable>
       </Link>
     </View>
-
-    <Text style={{ marginTop: "5%", textAlign: "center", fontSize: 15 }}>
-      Já possui uma conta?{" "}
-      <Link style={{ fontWeight: "bold", color: "#151D2D" }} href="/login/">
-        Faça o login
-      </Link>{" "}
-    </Text>
   </View>
 );
 
@@ -87,7 +68,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     fontSize: 30,
     fontWeight: "bold",
-    marginTop: "20%",
+    marginTop: "5%",
   },
 
   divInput: {
@@ -98,7 +79,7 @@ const styles = StyleSheet.create({
     marginTop: "5%",
     width: "92.5%",
     flex: 1,
-    padding: "1.2%",
+    padding: "3%",
     alignSelf: "center",
     backgroundColor: "#151D2D",
     alignContent: "center",

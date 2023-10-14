@@ -18,49 +18,35 @@ const login = () => (
       source={require("./../../assets/images/logoColorida.png")}
     />
 
-    <Text style={styles.title}>Cadastre-se</Text>
-
-    <View style={styles.divInput}>
-      <Text style={{ marginTop: "2%", fontSize: 15, fontWeight: "bold" }}>
-        Nome*
-      </Text>
-      <TextInput style={styles.input} placeholder="Insira seu nome" />
-    </View>
-
-    <View style={styles.divInput}>
-      <Text style={{ fontSize: 15, fontWeight: "bold" }}>Email*</Text>
-      <TextInput style={styles.input} placeholder="Insira seu email" />
-    </View>
-
-    <View style={styles.botaoDentro}>
-      <Link href="/criarSenha/" asChild>
-        <Pressable>
-          <Text style={{ color: "white" }}>Continuar</Text>
-        </Pressable>
-      </Link>
-    </View>
-
-    <View
+    <Text style={styles.title}>Verifique seu email</Text>
+    <Text
       style={{
-        marginTop: "5%",
-        flex: 1,
+        textAlign: "center",
+        width: "80%",
         alignSelf: "center",
-        alignItems: "center",
       }}
     >
-      <Link href="/home/" asChild>
-        <Pressable>
-          <Image source={require("./../../assets/images/Google.png")} />
+      Enviamos um link de redefinição de senha para o email olivia@exemplo.com
+    </Text>
+
+    
+    <Text style={{ marginTop: "5%", textAlign: "center", fontSize: 15 }}>
+      Não recebeu o email?{" "}
+      <Link style={{ fontWeight: "bold", color: "#151D2D" }} href="/redefinaSenha/">
+        Clique aqui para reenviar
+      </Link>{" "}
+    </Text>
+
+    <View >
+      <Link href="/login/" asChild>
+        <Pressable style={styles.voltar}>
+          <Image source={require("./../../assets/images/arrow-left.png")} />
+          <Text style={{paddingLeft: "2%"}}>Voltar para login</Text>
         </Pressable>
       </Link>
     </View>
 
-    <Text style={{ marginTop: "5%", textAlign: "center", fontSize: 15 }}>
-      Já possui uma conta?{" "}
-      <Link style={{ fontWeight: "bold", color: "#151D2D" }} href="/login/">
-        Faça o login
-      </Link>{" "}
-    </Text>
+    
   </View>
 );
 
@@ -87,7 +73,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     fontSize: 30,
     fontWeight: "bold",
-    marginTop: "20%",
+    marginTop: "30%",
   },
 
   divInput: {
@@ -98,7 +84,7 @@ const styles = StyleSheet.create({
     marginTop: "5%",
     width: "92.5%",
     flex: 1,
-    padding: "1.2%",
+    padding: "3%",
     alignSelf: "center",
     backgroundColor: "#151D2D",
     alignContent: "center",
@@ -106,5 +92,13 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     borderRadius: 5,
   },
+
+  voltar: {
+    flex: 1,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: 'center',
+    paddingTop: "5%",
+  }
 });
 export default login;

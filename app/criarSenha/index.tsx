@@ -18,39 +18,26 @@ const login = () => (
       source={require("./../../assets/images/logoColorida.png")}
     />
 
-    <Text style={styles.title}>Cadastre-se</Text>
+    <Text style={styles.title}>Escolha uma senha</Text>
 
     <View style={styles.divInput}>
       <Text style={{ marginTop: "2%", fontSize: 15, fontWeight: "bold" }}>
-        Nome*
+        Senha*
       </Text>
-      <TextInput style={styles.input} placeholder="Insira seu nome" />
+      <TextInput style={styles.input} placeholder="********" />
     </View>
 
     <View style={styles.divInput}>
-      <Text style={{ fontSize: 15, fontWeight: "bold" }}>Email*</Text>
-      <TextInput style={styles.input} placeholder="Insira seu email" />
+      <Text style={{ fontSize: 15, fontWeight: "bold" }}>
+        Confirmar a senha*
+      </Text>
+      <TextInput style={styles.input} placeholder="Confirme a senha" />
     </View>
 
     <View style={styles.botaoDentro}>
-      <Link href="/criarSenha/" asChild>
+      <Link href="/cadastroConcluido/" asChild>
         <Pressable>
-          <Text style={{ color: "white" }}>Continuar</Text>
-        </Pressable>
-      </Link>
-    </View>
-
-    <View
-      style={{
-        marginTop: "5%",
-        flex: 1,
-        alignSelf: "center",
-        alignItems: "center",
-      }}
-    >
-      <Link href="/home/" asChild>
-        <Pressable>
-          <Image source={require("./../../assets/images/Google.png")} />
+          <Text style={{ color: "white" }}>Concluir cadastro</Text>
         </Pressable>
       </Link>
     </View>
@@ -98,7 +85,7 @@ const styles = StyleSheet.create({
     marginTop: "5%",
     width: "92.5%",
     flex: 1,
-    padding: "1.2%",
+    padding: "3%",
     alignSelf: "center",
     backgroundColor: "#151D2D",
     alignContent: "center",

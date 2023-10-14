@@ -1,68 +1,88 @@
-import React from "react";
-import {
-  ImageBackground,
-  Button,
-  StyleSheet,
-  Image,
-  View,
-  Text,
-  Pressable,
-} from "react-native";
+import React, { useState } from 'react';
+import { Image, View, Text, TextInput, Pressable, StyleSheet } from 'react-native';
 import { Link } from "expo-router";
-import { TextInput } from "react-native-gesture-handler";
+import Checkbox from 'expo-checkbox';
 
-const login = () => (
-  <View>
-    <Image
-      style={styles.logoSize}
-      source={require("./../../assets/images/logoColorida.png")}
-    />
+export default function Login() {
+  const [isChecked, setChecked] = useState(false);
 
-    <Text style={styles.title}>Log in</Text>
-    <Text style={{marginLeft: "5%", marginTop: "2%"}}>Bem vindo(a) De volta!</Text>
-    <View style={styles.divInput}>
-      <Text style={{ marginTop: "2%", fontSize: 15, fontWeight: "bold" }}>
-        E-mail*
-      </Text>
-      <TextInput style={styles.input} placeholder="E-mail" />
-    </View>
+  return (
+    <View>
+      <Image
+        style={styles.logoSize}
+        source={require("./../../assets/images/logoColorida.png")}
+      />
 
-    <View style={styles.divInput}>
-      <Text style={{ fontSize: 15, fontWeight: "bold" }}>Senha*</Text>
-      <TextInput style={styles.input} placeholder="*******" />
-    </View>
+      <Text style={styles.title}>Log in</Text>
+      <Text style={{ marginLeft: "5%", marginTop: "2%" }}>Bem vindo(a) De volta!</Text>
+      <View style={styles.divInput}>
+        <Text style={{ marginTop: "2%", fontSize: 15, fontWeight: "bold" }}>
+          E-mail*
+        </Text>
+        <TextInput style={styles.input} placeholder="E-mail" />
+      </View>
 
-    <View style={styles.botaoDentro}>
+      <View style={styles.divInput}>
+        <Text style={{ fontSize: 15, fontWeight: "bold" }}>Senha*</Text>
+        <TextInput style={styles.input} placeholder="*******" />
+      </View>
+
+      <View style={styles.checkbox}>
+        <Checkbox
+          value={isChecked}
+          onValueChange={setChecked}
+          color={isChecked ? '#151D2D' : undefined}
+        />
+        <Text style={{
+          paddingLeft: "2%",
+        }}
+        
+        >Lembrar de mim</Text>
+        <Link href="/esqueciSenha/" asChild>
+        <Text style={{
+          color: "#1E1E1E",
+          paddingLeft: "35%",
+          textDecorationLine: "underline"
+        }}
+        
+        >Esqueci a senha</Text>
+        </Link>
+      </View>
+
+     
+
+      <View style={styles.botaoDentro}>
       <Link href="/home/" asChild>
-        <Pressable>
-          <Text style={{ color: "white" }}>ENTRAR</Text>
-        </Pressable>
-      </Link>
-    </View>
+          <Pressable>
+            <Text style={{ color: "white" }}>ENTRAR</Text>
+          </Pressable>
+        </Link>
+      </View>
 
-    <View
-      style={{
-        marginTop: "5%",
-        flex: 1,
-        alignSelf: "center",
-        alignItems: "center",
-      }}
-    >
-      <Link href="/home/" asChild>
-        <Pressable>
-          <Image source={require("./../../assets/images/GoogleEntrar.png")} />
-        </Pressable>
-      </Link>
-    </View>
+      <View
+        style={{
+          marginTop: "5%",
+          flex: 1,
+          alignSelf: "center",
+          alignItems: "center",
+        }}
+      >
+        <Link href="/home/" asChild>
+          <Pressable>
+            <Image source={require("./../../assets/images/GoogleEntrar.png")} />
+          </Pressable>
+        </Link>
+      </View>
 
-    <Text style={{ marginTop: "5%", textAlign: "center", fontSize: 15 }}>
-      Já possui uma conta?{" "}
+      <Text style={{ marginTop: "5%", textAlign: "center", fontSize: 15 }}>
+      Não tem uma conta?{" "}
       <Link style={{ fontWeight: "bold", color: "#151D2D" }} href="/login/">
-        Faça o login
+        Cadastre-se
       </Link>{" "}
     </Text>
   </View>
-);
+  );
+}
 
 const styles = StyleSheet.create({
   input: {
@@ -106,5 +126,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     borderRadius: 5,
   },
+
+  checkbox: {
+    marginLeft: "5%",
+    flexDirection: "row",
+  }
 });
-export default login;
