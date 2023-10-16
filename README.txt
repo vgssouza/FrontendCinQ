@@ -1,3 +1,5 @@
+Desenvolvimento FrontEnd de aplicativo mobile para a empresa CinQ.
+
 Dependências necessárias para fazer o aplicativo funcionar:
 
 Node.js:
