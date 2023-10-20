@@ -9,5 +9,9 @@ https://nodejs.org/en
 Expo go:
 https://docs.expo.dev/
 
+Npm:
+https://www.npmjs.com/
 
+inicie o app com:
+expo start --web
 
