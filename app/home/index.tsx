@@ -6,56 +6,32 @@ import {
   Text,
 } from "react-native";
 import { Link } from "expo-router";
-
+import {BsPersonCircle} from "react-icons/bs";
+import {IoFunnelOutline} from "react-icons/io5"
+import {BsFileEarmarkPdfFill} from "react-icons/bs"
 export default function home() {
   return (
     <>
+    <View>
       <View style={styles.header}>
-        <Text style={{ color: "white" }}>Minha vida</Text>
+      <BsPersonCircle color="white" fontSize={40} opacity={0}/>
+        <Text style={{ color: "white", fontSize: 23, }}>Minha vida</Text>
+        <BsPersonCircle color="white" fontSize={40}/>
       </View>
 
       <View style={styles.navbar}>
-        <Text style={{ color: "white" }}>Mês Atual</Text>
-        <Text style={{ color: "white" }}>Gerar Relatório</Text>
-      </View>
-
-      <View>
-        <Image
-          style={styles.grafico}
-          source={require("./../../assets/images/grafico.png")}
-        />
-      </View>
-
-      <View style={styles.entradaSaida}>
-        <Text style={{ color: "white", fontWeight: 600, marginTop: 10 }}>
-          Entradas X Saídas
-        </Text>
-
-        <View style={{ flexDirection: "row", marginTop: 40, gap: 50 }}>
-          <Text style={{ color: "green", fontSize: 15, fontWeight: 600 }}>
-            R$ 000
-          </Text>
-          <Text style={{ color: "red", fontSize: 15, fontWeight: 600 }}>
-            R$ 000
-          </Text>
-          <Text style={{ color: "purple", fontSize: 15, fontWeight: 600 }}>
-            R$ 000
-          </Text>
+        <View style={styles.navButton}>
+        <IoFunnelOutline  color="white" fontSize={25}/>
+        <Text style={{ color: "white", fontSize: 23, }}>Mês Atual</Text>
         </View>
 
-        <View
-          style={{
-            flexDirection: "row",
-            marginTop: 20,
-            gap: 60,
-            marginBottom: 10,
-          }}
-        >
-          <Text style={{ color: "white" }}>Entrada</Text>
-          <Text style={{ color: "white" }}>Saída</Text>
-          <Text style={{ color: "white" }}>Saldo</Text>
+        <View style={styles.navButton}>
+        <BsFileEarmarkPdfFill  color="white" fontSize={25}/>
+        <Text style={{ color: "white", fontSize: 23, }}>Gerar Relatório</Text>
         </View>
       </View>
+    
+    </View>
     </>
   );
 }
@@ -66,6 +42,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#133D63",
     padding: 15,
     paddingTop: 60,
+    justifyContent: "space-around",
+    flexDirection: "row",
   },
 
   navbar: {
@@ -88,5 +66,11 @@ const styles = StyleSheet.create({
     margin: 18,
   },
   
+  navButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 5,
+    justifyContent: "space-around",
+  },
   
 });
