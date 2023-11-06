@@ -4,6 +4,7 @@ import {
   Image,
   View,
   Text,
+  Pressable,
 } from "react-native";
 import { Link } from "expo-router";
 import {BsPersonCircle} from "react-icons/bs";
@@ -22,7 +23,11 @@ export default function home() {
       <View style={styles.header}>
       <BsPersonCircle color="white" fontSize={30} opacity={0}/>
         <Text style={{ color: "white", fontSize: 20, }}>Minha vida</Text>
-        <BsPersonCircle color="white" fontSize={40}/>
+        <Link href="/perfil/" asChild>
+            <Pressable>
+            <BsPersonCircle color="white" fontSize={40}/>
+            </Pressable>
+          </Link>
       </View>
 
       <View style={styles.navbar}>
