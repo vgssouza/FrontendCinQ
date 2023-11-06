@@ -47,6 +47,7 @@ export default function home() {
             widthAndHeight={widthAndHeight}
             series={series}
             sliceColor={sliceColor}
+            coverRadius={0.50}
           />
       
 
@@ -95,7 +96,7 @@ const styles = StyleSheet.create({
   grafico: {
     flex: 1,
     alignSelf: "center",
-    margin: 20,
+    margin: 25,
   },
 
   entradaSaida: {
