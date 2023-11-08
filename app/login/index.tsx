@@ -3,6 +3,7 @@ import { Image, View, Text, TextInput, Pressable, StyleSheet } from 'react-nativ
 import { Link } from "expo-router";
 import Checkbox from 'expo-checkbox';
 
+
 export default function Login() {
   const [isChecked, setChecked] = useState(false);
 
@@ -53,7 +54,7 @@ export default function Login() {
 
       <View style={styles.botaoDentro}>
       <Link href="/home/" asChild>
-          <Pressable>
+          <Pressable onPress={validarLogin}>
             <Text style={{ color: "white" }}>ENTRAR</Text>
           </Pressable>
         </Link>
