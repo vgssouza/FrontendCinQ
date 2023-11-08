@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Image, View, Text, TextInput, Pressable, StyleSheet } from 'react-native';
 import { Link } from "expo-router";
 import Checkbox from 'expo-checkbox';
+import {Login} from "./validarLogin.js" //importar a função Login do arquivo .js validar login
 
 
 export default function Login() {
