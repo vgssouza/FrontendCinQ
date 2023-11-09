@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Pressable, StyleSheet } from 'react-native';
 
-
+ // Função para validar o login
 export default function Login() {
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
   const [isChecked, setChecked] = useState(false);
 
-  // Função para validar o login
+ 
   const validarLogin = () => {
     const usuarios = [
       {
